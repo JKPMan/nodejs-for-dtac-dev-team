@@ -33,6 +33,12 @@ app.get('/profile/:name', function(req, res){
     res.send(str);
 });
 */
+
+/*
+If true, the client’s IP address is understood as the left-most entry in the X-Forwarded-* header.
+
+If false, the app is understood as directly facing the Internet and the client’s IP address is derived from req.connection.remoteAddress. This is the default setting.
+*/
 app.set('trust proxy', true);
 
 /*

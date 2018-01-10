@@ -47,10 +47,10 @@ var do_connect = function(err, client, done) {
         }
         
 
-        var query = client.query('SELECT NOW() as now').then(res => console.log(res.rows[0])).catch(e => console.error(e.stack));
+        //var query = client.query('SELECT NOW() as now').then(res => console.log(res.rows[0])).catch(e => console.error(e.stack));
 
         const strSQL = "select * from public.item";
-        query = client.query(strSQL, callbackQuery);
+        var query = client.query(strSQL, callbackQuery);
     }catch(err){
         console.log(err);
     }
