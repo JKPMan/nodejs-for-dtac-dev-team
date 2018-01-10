@@ -1,0 +1,19 @@
+/*
+Template Engine Comparision:
+    https://developer.ibm.com/node/2014/11/11/compare-javascript-templates-jade-mustache-dust/
+    Jade (rename to PUG):
+        https://github.com/pugjs/pug
+        
+        VS Code Plug-In: https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-jade-snippets
+
+    Mustache:
+        https://github.com/janl/mustache.js
+    Dust:
+        https://github.com/linkedin/dustjs
+    Nunjucks:
+        https://github.com/mozilla/nunjucks
+    EJS:
+        https://github.com/tj/ejs
+
+*/
+
