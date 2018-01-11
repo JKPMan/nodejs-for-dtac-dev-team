@@ -1,6 +1,5 @@
 'use strict'
 var pg = require("pg");
-const reslut=[];
 
 /*
 let pool = new pg.Pool({
@@ -43,7 +42,7 @@ var do_connect = function(err, client, done) {
         
 
         const strSQL = "insert into public.item(name,description) values($1, $2) RETURNING id";
-        var query = client.query(strSQL,['item-4','Cat'], callbackQuery);
+        var query = client.query(strSQL,['item-new-item','Cat and Dog'], callbackQuery);
     }catch(err){
         console.log(err);
     }

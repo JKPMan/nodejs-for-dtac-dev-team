@@ -1,0 +1,27 @@
+<form (submit)="save(id.value, Name.value, Desc.value);" ui-keypress="{'enter':'addArr(txt.value);'}">
+<div>
+<input type="hidden" #id value='{{item.id}}'>
+</div>
+<div>
+  <span>Name:</span> <input type="text" #Name value="{{item.Name}}" placeholder="Enter item name">
+</div>
+<div>
+<span>Description:</span>  <input type="text" #Desc value="{{item.Description}}" placeholder="Enter item description">
+</div>
+<br>
+<input type="submit" value="Save">
+<br>
+<br>
+<input type="button" value="Add string" (click)="addArr(txt.value);">
+<br>
+<div>
+  Text <input type="text"  #txt (keyup)="addArr(txt.value); event=$event.keyCode;">{{event}}
+<table>
+    <tr *ngFor="let str of arrs; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{str}}</td>
+    </tr>
+</table>
+</div>
+</form>
+

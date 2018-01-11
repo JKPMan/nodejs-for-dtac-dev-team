@@ -1,6 +1,5 @@
 'use strict'
 var pg = require("pg");
-const reslut=[];
 
 /*
 let pool = new pg.Pool({
@@ -44,7 +43,7 @@ var do_connect = function(err, client, done) {
         
 
         const strSQL = "update public.item set description='updated by Prin' where id =$1";
-        var query = client.query(strSQL,[1], callbackQuery);
+        var query = client.query(strSQL,[8], callbackQuery);
 
 
     }catch(err){

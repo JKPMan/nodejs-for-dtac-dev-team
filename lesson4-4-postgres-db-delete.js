@@ -1,6 +1,5 @@
 'use strict'
 var pg = require("pg");
-const reslut=[];
 
 /*
 let pool = new pg.Pool({
@@ -44,7 +43,7 @@ var do_connect = function(err, client, done) {
         
 
         const strSQL = "delete from public.item where id =$1";
-        const delete_id = 5
+        const delete_id = 8
         var query = client.query(strSQL,[delete_id], callbackQuery);
 
 

@@ -1,8 +1,5 @@
 'use strict'
 var pg = require("pg");
-const reslut=[];
-
-const strConn = process.env.DATABASE_URL || 'postgres://dev-mrtrdb.tac.co.th:5432/checkindb_test';
 /*
 let pool = new pg.Pool({
     host: 'dev-mrtrdb.tac.co.th',
@@ -25,6 +22,8 @@ var callbackQuery = function(err, result){
     if(err){
         throw err;
     }
+
+    console.log("param1="+this.param1+", param2="+this.param2);
 
     for(var i=1;i<=result.rows.length-1;i++){
         console.log(JSON.stringify(result.rows[i]));
@@ -50,7 +49,7 @@ var do_connect = function(err, client, done) {
         //var query = client.query('SELECT NOW() as now').then(res => console.log(res.rows[0])).catch(e => console.error(e.stack));
 
         const strSQL = "select * from public.item";
-        var query = client.query(strSQL, callbackQuery);
+        var query = client.query(strSQL, callbackQuery.bind({param1:"OK OK", param2:"Yes"}));
     }catch(err){
         console.log(err);
     }
@@ -62,7 +61,6 @@ var do_connect = function(err, client, done) {
 
 try{
     pool.connect(do_connect);
-
 }catch(err){
     console.log(err)
 }
