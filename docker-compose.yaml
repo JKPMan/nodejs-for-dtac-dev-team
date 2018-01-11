@@ -5,7 +5,7 @@ services:
         restart: always
         image: postgres:latest
         volumes:
-            - /Users/print/source-code/my-tutorial/postgres/data:/var/lib/postgresql/data
+            - ~/my-postgres/data:/var/lib/postgresql/data
         environment:
             POSTGRES_PASSWORD: 123
             POSTGRES_USER: postgres
