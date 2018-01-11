@@ -1,0 +1,16 @@
+version: '2'
+services: 
+    postgres9:
+        container_name: image-recognition-postgres-dev
+        restart: always
+        image: postgres:latest
+        volumes:
+            - /Users/print/source-code/my-tutorial/postgres/data:/var/lib/postgresql/data
+        environment:
+            POSTGRES_PASSWORD: 123
+            POSTGRES_USER: postgres
+            PGDATA : /var/lib/postgresql/data
+        ports:
+            - 10000:5432
+
+
