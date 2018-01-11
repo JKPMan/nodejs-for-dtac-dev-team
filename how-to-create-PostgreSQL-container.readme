@@ -1,0 +1,12 @@
+How to create PostgreSQL db using docker.
+Note: you have to install docker engine in your environment before perform the following steps
+1) pull docker from docker hub
+$ docker pull postgres
+
+2) create a directory to keep data 
+mkdir ~/my-postgres
+
+4) download docker-compose.yml from this repository and places into ~/my-postgres
+
+5) starting your docker container 
+$ docker-compose up
