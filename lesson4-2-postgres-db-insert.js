@@ -1,15 +1,6 @@
 'use strict'
 var pg = require("pg");
 
-/*
-let pool = new pg.Pool({
-    host: 'dev-mrtrdb.tac.co.th',
-    port: 5432,
-    database: 'chkindb_test',
-    user: 'chkin_app',
-    password: 'dxBhLSTD'
-});
-*/
 
 let pool = new pg.Pool({
     host: 'localhost',
