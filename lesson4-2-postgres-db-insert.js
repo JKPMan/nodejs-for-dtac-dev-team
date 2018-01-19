@@ -25,6 +25,7 @@ var callbackQuery = function(err, result){
 }
 
 var do_connect = function(err, client, done) {
+    done();
     try{
         if (err) {
             //likely a connection error that will print to console.
@@ -38,7 +39,6 @@ var do_connect = function(err, client, done) {
         console.log(err);
     }
 
-    done();
 }
 
 
